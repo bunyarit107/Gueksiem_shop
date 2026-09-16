@@ -1,0 +1,91 @@
+/* =========================================
+   global.css - การตั้งค่าพื้นฐานและ Navbar 
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Noto Sans Thai', sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    line-height: 1.5;
+}
+
+/* --- แถบนำทาง (Navbar) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #ffffff;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #111;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: #707070;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icon-btn {
+    color: #111111;
+    display: flex; 
+    align-items: center;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.icon-btn:hover {
+    color: #707070;
+    transform: scale(1.1);
+}
+
+.icon-btn svg {
+    width: 26px;
+    height: 26px;
+}
+
+/* Utilities พื้นฐาน */
+.w-100 {
+    width: 100%;
+    display: block;
+}
+
+/* Responsive สำหรับ Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: column; 
+        gap: 15px;
+    }
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}

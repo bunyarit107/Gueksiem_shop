@@ -1,0 +1,219 @@
+/* =========================================
+   product_detail.css - หน้ารายละเอียดสินค้า
+   ========================================= */
+
+/* พื้นหลังสีเทาแบบในรูป Mockup */
+.bg-gray-layout {
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.product-detail-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px 50px 100px 50px;
+}
+
+/* เลย์เอาต์แบ่ง 2 ฝั่ง ซ้าย(รูปภาพ) ขวา(ข้อมูล) */
+.product-layout {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* ================= ฝั่งซ้าย: แกลเลอรี ================= */
+.product-gallery {
+    flex: 1.5; /* ให้ฝั่งรูปภาพกว้างกว่าฝั่งข้อมูลเล็กน้อย */
+}
+
+/* รูปหลักด้านบน */
+.main-image-box {
+    width: 100%;
+    aspect-ratio: 16 / 10; /* สัดส่วนสี่เหลี่ยมผืนผ้าแนวนอนคล้ายในรูป */
+    background-color: #e5e5e5;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.main-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+/* รูปเล็ก 5 รูปล่าง */
+.thumbnail-list {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.thumbnail-box {
+    width: 18%; /* ให้แบ่งกัน 5 กล่องพอดี */
+    aspect-ratio: 1 / 1;
+    background-color: #e5e5e5;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.thumbnail-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* เอฟเฟกต์รูปเล็กเมื่อถูกเลือก */
+.thumbnail-box:hover {
+    opacity: 0.8;
+}
+.thumbnail-box.active {
+    border-color: #111111; /* ใส่ขอบดำให้รูปที่กำลังแสดงอยู่ */
+}
+
+/* รูปจำลองสีเทาที่ยังไม่มีภาพ */
+.empty-thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+
+/* ================= ฝั่งขวา: ข้อมูลสินค้า ================= */
+.product-info-section {
+    flex: 1;
+    padding-top: 10px;
+}
+
+.pd-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 15px;
+}
+
+.pd-price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.pd-description {
+    margin-bottom: 40px;
+}
+.pd-description p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.desc-text {
+    font-size: 1rem;
+    color: #555555;
+    line-height: 1.6;
+}
+
+/* ================= ฟอร์มเลือกไซส์ ================= */
+.pd-size-selector {
+    margin-bottom: 50px;
+}
+.size-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.size-options {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* ซ่อน Radio Button ดั้งเดิมทิ้งไป */
+.size-box input[type="radio"] {
+    display: none;
+}
+
+/* ตกแต่ง Label ให้กลายเป็นปุ่มกด */
+.size-box span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 1px solid #111111;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #111111;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* เมื่อผู้ใช้คลิกเลือก (Checked) ปุ่มจะกลายเป็นสีดำ */
+.size-box input[type="radio"]:checked + span {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+.size-box span:hover {
+    background-color: #f0f0f0;
+}
+.size-box input[type="radio"]:checked + span:hover {
+    background-color: #111111;
+}
+
+/* ================= ปุ่มสั่งซื้อ ================= */
+.btn-order {
+    display: block;
+    width: 100%;
+    max-width: 250px; /* ขนาดความกว้างปุ่มตามรูป */
+    padding: 16px 0;
+    background-color: #f0f0f0; /* พื้นหลังปุ่มเทาอ่อน */
+    color: #111111;
+    border: none;
+    border-radius: 40px; /* ปุ่มทรงแคปซูล */
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: auto;
+    margin-right: auto; /* จัดให้อยู่ตรงกลางของฝั่งขวา */
+}
+.btn-order:hover {
+    background-color: #cccccc;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 992px) {
+    .product-layout {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .product-gallery, .product-info-section {
+        width: 100%;
+        flex: none;
+    }
+    .btn-order {
+        max-width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .product-detail-container {
+        padding: 20px 20px 60px 20px;
+    }
+    .thumbnail-list {
+        gap: 10px;
+    }
+    .pd-title {
+        font-size: 1.8rem;
+    }
+}

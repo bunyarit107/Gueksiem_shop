@@ -1,0 +1,63 @@
+/* =========================================
+   products.css - โครงสร้างตารางสินค้า
+   ========================================= */
+.new-arrivals-section, 
+.products-container {
+    padding: 40px 50px 100px 50px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.new-arrivals-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #111111;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px; 
+    row-gap: 50px;    
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #111111;
+    background-color: transparent; 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); 
+}
+
+.product-image-box {
+    width: 100%;
+    aspect-ratio: 4 / 4.5; 
+    background-color: #dbdbdb; 
+    margin-bottom: 12px; 
+    overflow: hidden;
+}
+
+.product-info {
+    font-size: 1.1rem;
+    font-weight: 400; 
+    text-align: left; 
+}
+
+/* Responsive สำหรับตารางสินค้า */
+@media (max-width: 1024px) {
+    .product-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+    .new-arrivals-section, .products-container { padding: 30px 20px 60px 20px; }
+    .product-grid { grid-template-columns: repeat(2, 1fr); column-gap: 15px; row-gap: 30px; }
+}
+@media (max-width: 480px) {
+    .product-grid { grid-template-columns: repeat(1, 1fr); }
+}

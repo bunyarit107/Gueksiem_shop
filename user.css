@@ -1,0 +1,289 @@
+/* =========================================
+   user.css - หน้าโปรไฟล์ผู้ใช้ & ประวัติการสั่งซื้อ
+   ========================================= */
+
+.bg-gray-theme {
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.user-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 50px 100px 50px;
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #111111;
+}
+
+.user-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* ================= ฝั่งซ้าย: Profile Card ================= */
+.user-sidebar {
+    flex: 1;
+    max-width: 350px;
+}
+
+.profile-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 40px 30px;
+    text-align: center;
+    border: 1px solid #eeeeee;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    background-color: #111111;
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+}
+
+.profile-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.profile-username {
+    color: #707070;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.profile-info {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.info-group {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.info-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #707070;
+    margin-bottom: 5px;
+}
+
+.info-value {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.btn-edit-profile {
+    width: 100%;
+    padding: 12px;
+    background-color: #111111;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 15px;
+}
+.btn-edit-profile:hover {
+    background-color: #555555;
+}
+
+.btn-logout {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    color: #ff3333;
+    border: 1px solid #ff3333;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.btn-logout:hover {
+    background-color: #ff3333;
+    color: #ffffff;
+}
+
+/* ================= ฝั่งขวา: ประวัติการสั่งซื้อ ================= */
+.order-history-content {
+    flex: 2;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.order-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid #eeeeee;
+    transition: box-shadow 0.3s ease;
+}
+.order-card:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.order-date, .order-no {
+    display: block;
+    font-size: 0.95rem;
+    color: #707070;
+}
+.order-no {
+    font-weight: 600;
+    color: #111;
+    margin-top: 5px;
+}
+
+.order-status {
+    background-color: #e5f9e5;
+    color: #28a745;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.order-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.order-item-details h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.order-item-details p {
+    color: #707070;
+    font-size: 0.95rem;
+}
+
+.order-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.order-footer {
+    text-align: right;
+}
+
+.btn-view-receipt {
+    background-color: transparent;
+    border: 1px solid #111111;
+    color: #111111;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn-view-receipt:hover {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+/* ================= Pop-up ใบเสร็จ (รีไซเคิลจาก checkout.css) ================= */
+.modal-overlay {
+    display: none; 
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 1000;
+    justify-content: center; align-items: center;
+    padding: 20px;
+}
+.modal-overlay.active { display: flex; }
+
+.modal-content {
+    background-color: #ffffff;
+    width: 100%; max-width: 600px;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    animation: slideUp 0.3s ease-out; 
+}
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.receipt-header {
+    display: flex; justify-content: space-between;
+    margin-bottom: 40px; font-size: 0.95rem; color: #707070;
+}
+.receipt-body { min-height: 150px; }
+.receipt-row {
+    display: flex; justify-content: space-between;
+    font-size: 1.1rem; font-weight: 500; margin-bottom: 15px;
+}
+.receipt-footer {
+    display: flex; justify-content: space-between;
+    font-size: 1.2rem; font-weight: 700;
+    margin-top: 40px; padding-top: 20px;
+    border-top: 1px dashed #cccccc; 
+}
+.modal-actions { margin-top: 40px; }
+
+/* ================= Responsive & Print ================= */
+@media (max-width: 900px) {
+    .user-layout { flex-direction: column; }
+    .user-sidebar { max-width: 100%; width: 100%; }
+}
+@media (max-width: 768px) {
+    .user-container { padding: 20px 20px 60px 20px; }
+    .order-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .order-body { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .order-footer { text-align: left; }
+}
+
+/* คำสั่งปริ้นท์ใบเสร็จ (ซ่อนทุกอย่างยกเว้น Pop-up) */
+@media print {
+    .hide-on-print { display: none !important; }
+    .modal-overlay {
+        position: static; background-color: transparent;
+        display: block; padding: 0;
+    }
+    .modal-content {
+        box-shadow: none; padding: 0; max-width: 100%; animation: none;
+    }
+    body { background-color: #fff; }
+}
