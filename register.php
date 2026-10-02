@@ -61,9 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php endif; ?>
 
             <form method="POST" action="register.php">
-                <div class="input-group">
-                    <input type="text" name="username" placeholder="ชื่อผู้ใช้งาน (Username)" required>
-                </div>
+                
                 <div class="input-group">
                     <input type="text" name="fullname" placeholder="ชื่อ-นามสกุล" required>
                 </div>
@@ -101,6 +99,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
                 <!-- จบชุดกรอกข้อมูลที่อยู่ -->
 
+                <div class="input-group">
+                    <input type="text" name="username" placeholder="ชื่อผู้ใช้งาน (Username)" required>
+                </div>
                 <div class="input-group" style="margin-top: 20px;">
                     <input type="password" name="password" placeholder="รหัสผ่าน" required>
                 </div>

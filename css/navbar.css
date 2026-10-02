@@ -1,26 +1,13 @@
 /* =========================================
-   global.css - การตั้งค่าพื้นฐานและ Navbar 
+   navbar.css - CSS สำหรับ Navbar
    ========================================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Inter', 'Noto Sans Thai', sans-serif;
-    background-color: #ffffff;
-    color: #111111;
-    line-height: 1.5;
-}
-
-/* --- แถบนำทาง (Navbar) --- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color: #ffffff;
+    background-color: #f1f1f1;
 }
 
 .logo {
@@ -37,7 +24,7 @@ body {
 
 .nav-menu a {
     text-decoration: none;
-    color: #111;
+    color: #111111;
     font-size: 1rem;
     font-weight: 500;
     transition: color 0.2s ease;
@@ -55,7 +42,7 @@ body {
 
 .icon-btn {
     color: #111111;
-    display: flex; 
+    display: flex;
     align-items: center;
     transition: color 0.2s ease, transform 0.2s ease;
 }
@@ -70,22 +57,21 @@ body {
     height: 26px;
 }
 
-/* Utilities พื้นฐาน */
-.w-100 {
-    width: 100%;
-    display: block;
-}
 
-/* Responsive สำหรับ Navbar */
+/* Responsive Navbar */
+
 @media (max-width: 768px) {
+
     .navbar {
         padding: 15px 20px;
-        flex-direction: column; 
+        flex-direction: column;
         gap: 15px;
     }
+
     .nav-menu {
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
     }
+
 }
